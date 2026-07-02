@@ -1,10 +1,10 @@
 # Losownik
 
-Minimalistyczna aplikacja do losowania na czarnym tle. Czysty HTML, zero zależności, gotowa pod GitHub Pages.
+Minimalistyczna aplikacja do losowania na czystym czarnym tle — bez żadnych napisów, klikasz i pokazuje wynik. Czysty HTML, zero zależności, gotowa pod GitHub Pages.
 
 ## Tryby losowania
 
-- **Tak / Nie**
+- **Yes / No**
 - **Lewo / Prawo** (z ikonami strzałek)
 - **Lewo / Prawo / Przód** (z ikonami strzałek)
 - **Kostka** (1–6)

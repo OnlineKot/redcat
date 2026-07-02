@@ -71,17 +71,6 @@
   .arrow svg{width:clamp(120px,40vw,260px);height:auto;display:block;}
   .stroke{stroke:var(--fg);}
 
-  .tagline{
-    color:var(--muted);font-size:13px;letter-spacing:.32em;text-transform:uppercase;
-    font-weight:600;
-  }
-  .hint-tap{
-    position:fixed;left:0;right:0;bottom:calc(13vh + 22px);text-align:center;
-    color:var(--muted);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-    z-index:11;pointer-events:none;transition:opacity .5s ease;
-  }
-  body.drawn .hint-tap{opacity:0;}
-
   /* ---- dice ---- */
   .dice{
     width:clamp(130px,42vw,220px);aspect-ratio:1;border-radius:24px;
@@ -183,11 +172,8 @@
 
   <!-- main stage -->
   <div class="stage" id="stage">
-    <div class="result" id="result">
-      <div class="tagline">Losownik</div>
-    </div>
+    <div class="result" id="result"></div>
   </div>
-  <div class="hint-tap" id="hintTap">Dotknij ekranu, aby wylosować</div>
 
   <!-- menu -->
   <div class="scrim" id="scrim"></div>
@@ -252,7 +238,7 @@
 
   // ---------- modes ----------
   var MODES = [
-    {id:'yn',  label:'Tak / Nie', icon:IC.yn},
+    {id:'yn',  label:'Yes / No', icon:IC.yn},
     {id:'lr',  label:'Lewo / Prawo', icon:IC.lr},
     {id:'lrf', label:'Lewo / Prawo / Przód', icon:IC.lrf},
     {id:'dice',label:'Kostka', icon:IC.dice},
@@ -273,7 +259,7 @@
   var $ = function(id){return document.getElementById(id);};
   var stage=$('stage'), result=$('result'), sheet=$('sheet'), scrim=$('scrim'),
       modesEl=$('modes'), rangeEl=$('range'), rmin=$('rmin'), rmax=$('rmax'),
-      toast=$('toast'), swapLbl=$('swapLbl'), hintTap=$('hintTap');
+      toast=$('toast'), swapLbl=$('swapLbl');
 
   // build mode buttons
   MODES.forEach(function(m){
@@ -302,7 +288,7 @@
     var html='';
     switch(state.mode){
       case 'yn':
-        html='<div class="word">'+(rnd(2)?'TAK':'NIE')+'</div>';break;
+        html='<div class="word">'+(rnd(2)?'YES':'NO')+'</div>';break;
       case 'lr':
         html=arrowSVG([rnd(2)?'right':'left']);break;
       case 'lrf':
@@ -319,7 +305,6 @@
       result.innerHTML=html;
       result.classList.remove('flip');
     },160);
-    document.body.classList.add('drawn');
   }
 
   // tap the stage to draw
