@@ -64,6 +64,8 @@
     font-weight:600;letter-spacing:-.02em;line-height:.95;
     font-size:clamp(56px,18vw,160px);
   }
+  .word.yes{color:#22c55e;text-shadow:0 0 90px rgba(34,197,94,.35);}
+  .word.no{color:#ef4444;text-shadow:0 0 90px rgba(239,68,68,.35);}
   .num{
     font-weight:600;letter-spacing:-.04em;line-height:.9;
     font-size:clamp(90px,34vw,300px);font-variant-numeric:tabular-nums;
@@ -288,7 +290,7 @@
     var html='';
     switch(state.mode){
       case 'yn':
-        html='<div class="word">'+(rnd(2)?'YES':'NO')+'</div>';break;
+        html=rnd(2)?'<div class="word yes">YES</div>':'<div class="word no">NO</div>';break;
       case 'lr':
         html=arrowSVG([rnd(2)?'right':'left']);break;
       case 'lrf':
