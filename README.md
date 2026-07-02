@@ -4,7 +4,7 @@ Minimalistyczna aplikacja do losowania na czystym czarnym tle — bez żadnych n
 
 ## Tryby losowania
 
-- **Yes / No**
+- **Yes / No** (YES zielone, NO czerwone)
 - **Lewo / Prawo** (z ikonami strzałek)
 - **Lewo / Prawo / Przód** (z ikonami strzałek)
 - **Kostka** (1–6)
@@ -13,10 +13,10 @@ Minimalistyczna aplikacja do losowania na czystym czarnym tle — bez żadnych n
 ## Jak używać
 
 - **Dotknij ekranu** w dowolnym miejscu, aby wylosować.
-- **Pojedyncze dotknięcie** ukrytego paska (domyślnie u góry) otwiera menu wyboru trybu. Pasek jest niewidoczny — to sam hitbox; delikatna kreska na starcie podpowiada, gdzie dotknąć.
-- **Podwójne dotknięcie** ukrytego paska przenosi menu między górą a dołem ekranu (wygodne dla różnych rąk).
+- **Pojedyncze dotknięcie** ukrytego paska u góry otwiera menu wyboru trybu. Pasek jest niewidoczny — to sam hitbox; delikatna kreska na starcie podpowiada, gdzie dotknąć.
+- **Niewidzialne pudełko w lewym dolnym rogu** — dotknięcie otwiera ekran PIN. Poprawny PIN (**17021**) otwiera menu opcji. Dotknięcie czarnego tła ekranu PIN zamyka go.
 
-Skróty na komputerze: `spacja`/`enter` losuje, `M` otwiera/zamyka menu, `Esc` zamyka.
+Skróty na komputerze: `spacja`/`enter` losuje, `M` otwiera/zamyka menu, `Esc` zamyka; na ekranie PIN działają cyfry i `Backspace`.
 
 ## Publikacja na GitHub Pages
 
